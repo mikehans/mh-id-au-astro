@@ -1,15 +1,68 @@
 ---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import Banner from "@components/Banner.astro";
+import CardList from "@components/CardList.astro";
+
+const pageTitle = "Home";
+
+const cards = [
+	{
+		title:"Card 1 here", 
+		pubDate:"23 Mar 2023", 
+		imageUrl: "https://placehold.co/600x400", 
+		description: "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.", 
+		readMoreLink:"#"
+	},
+	{
+		title:"Card 2 here", 
+		pubDate:"21 Mar 2023", 
+		imageUrl: "https://placehold.co/600x400", 
+		description: "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.", 
+		readMoreLink:"#"
+	},
+	{
+		title:"Card 3 here", 
+		pubDate:"26 Mar 2023", 
+		imageUrl: "https://placehold.co/600x400", 
+		description: "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.", 
+		readMoreLink:"#"
+	},
+	{
+		title:"Card 4 here", 
+		pubDate:"30 Mar 2023", 
+		imageUrl: "https://placehold.co/600x400", 
+		description: "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.", 
+		readMoreLink:"#"
+	}
+]
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <Banner />
+
+  <Section sectionHeading="Hi I'm Mike">
+    <p>I'm a software developer, woodworker, gardener and beer enthusiast.</p>
+    <p>
+      I maintain a tech blog here where I write about web development topics and
+      also show the tech projects I have underway or have completed. If they are
+      in a running state, you'll be able to check it out. They come and go - I
+      don't have production constraints.
+    </p>
+  </Section>
+  
+  <Section sectionHeading="My Latest Posts" isSectionDark>
+    <CardList cardListItems={cards} />
+  </Section>
+
+  <Section sectionHeading="Test section">
+	<p>This is a section.</p>
+	<p>This section has a second paragraph.</p>
+  </Section>
+
+  
+  <Section sectionHeading="Test section" isSectionDark>
+	<p>This is a section.</p>
+	<p>This section has a second paragraph.</p>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import MainMenu from "./MainMenu.astro";
+
+const {siteTitle} = Astro.props;
+---
+
+<header class="navbar">
+    <div class="container">
+        <span class="siteHeading">{siteTitle}</span>
+        <MainMenu />
+    </div>
+</header>
+
+<style>
+.navbar {
+    background: var(--color-banner);
+    background: linear-gradient(138deg, rgba(8, 16, 39, 0.9) 0%, rgba(8, 16, 39, 0.9) 70%, rgba(114, 119, 132, 0.9) 95%, rgba(255, 255, 255, 0.9) 100%);
+
+    /* background: linear-gradient(315 deg, rgba(195, 199, 210, 1) 0%, rgba(134, 138, 149, 1) 12%, rgba(72, 82, 109, 1) 42%, rgba(8, 16, 39, 1) 100%); */
+    /* padding: 8px 16px; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+.siteHeading {
+    font-size: 2rem;
+    color: white;
+}
+
+.navbar>.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-heading {
+    display: inline;
+    margin: 0;
+    color: var(--color-white);
+}
+
+</style>

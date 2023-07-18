@@ -1,0 +1,21 @@
+---
+const { sectionHeading, isSectionDark } = Astro.props;
+---
+
+<section class=`section ${isSectionDark && "section-dark"}`>
+  <h2>{sectionHeading}</h2>
+  <slot />
+</section>
+
+<style>
+    /* 
+        18 Jul 23
+        Styles have been moved to global owing to how Astro handles the CSS modules.
+        For elements that are part of the component, they gain a class specific to the component.
+        CSS is applied with a :where(.astro-ASSDDF) selector.
+        This selector is only applied to elements that are part of the component, not to elements 
+            brought in through the <slot />.
+     */
+
+
+</style>

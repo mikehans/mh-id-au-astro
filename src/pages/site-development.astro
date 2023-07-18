@@ -1,0 +1,78 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import ShortBanner from "@components/ShortBanner.astro";
+
+const pageTitle = "Site Development";
+
+const testData = [
+  {
+    title: "Log 1",
+    date: "12 Mar 2023",
+    content: "This is stuff that happened",
+  },
+  {
+    title: "Log 2",
+    date: "22 Mar 2023",
+    content: "This is stuff that happened",
+  },
+  {
+    title: "Log 3",
+    date: "2 Mar 2023",
+    content: "This is stuff that happened",
+  },
+  {
+    title: "Log 4",
+    date: "14 Mar 2023",
+    content: "This is stuff that happened",
+  },
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ShortBanner />
+  <Section sectionHeading={pageTitle}>
+    <p>
+      I am tracking the history of changes to the site here. It's intended to be
+      brief and catalogues a history of failing forward.
+    </p>
+
+    <ul class="logList">
+      {
+        testData.map((item) => (
+          <li class="listItem">
+            <h3 class="listItem-title">{item.title}</h3>
+            <p class="listItem-date">{item.date}</p>
+            <p class="listItem-content">{item.content}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+</BaseLayout>
+
+<style>
+  .logList {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .listItem {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    /* box-shadow: 2rem 1rem 2 rem 0 var(--color-light); */
+    box-shadow: 8px 8px 12px 0px var(--color-border);
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .listItem-date {
+    font-size: 0.8rem;
+  }
+
+  .has-darkBackground {
+    background-color: rgba(114, 119, 132, 1);
+    border: 1px solid rgb(32, 32, 32);
+    box-shadow: 8px 8px 12px 0px rgb(32, 32, 32);
+  }
+</style>

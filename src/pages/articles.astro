@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import CardList from "@components/CardList.astro";
+import ShortBanner from "@components/ShortBanner.astro";
+
+const pageTitle = "Articles";
+
+const cards = [
+  {
+    title: "Card 1 here",
+    pubDate: "23 Mar 2023",
+    imageUrl: "https://placehold.co/600x400",
+    description:
+      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
+    readMoreLink: "#",
+  },
+  {
+    title: "Card 2 here",
+    pubDate: "21 Mar 2023",
+    imageUrl: "https://placehold.co/600x400",
+    description:
+      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
+    readMoreLink: "#",
+  },
+  {
+    title: "Card 3 here",
+    pubDate: "26 Mar 2023",
+    imageUrl: "https://placehold.co/600x400",
+    description:
+      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
+    readMoreLink: "#",
+  },
+  {
+    title: "Card 4 here",
+    pubDate: "30 Mar 2023",
+    imageUrl: "https://placehold.co/600x400",
+    description:
+      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
+    readMoreLink: "#",
+  },
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ShortBanner />
+
+  <Section sectionHeading={pageTitle}>
+    <p>
+      I'm writing about various topics relevant to web development, Azure and
+      other things software related.
+    </p>
+    <p>
+        Several items are personal projects that are either in progress or completed. 
+        Projects include a description of the project, a discussion of any interesting things that occurred.
+        There should be a GitHub repo associated with them. If they are running, you'll be able to check them out.
+        I don't have production constraints, so they come and go.
+    </p>
+
+    <CardList cardListItems={cards} />
+  </Section>
+</BaseLayout>

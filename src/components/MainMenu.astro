@@ -1,0 +1,45 @@
+---
+---
+
+<nav class="mainMenu">
+    <ul class="mainMenu-list">
+        <li class="mainMenu-listItem"><a href="/" class="mainMenu-Link">Home</a></li>
+        <li class="mainMenu-listItem"><a href="/about-me" class="mainMenu-Link">About Me</a></li>
+        <li class="mainMenu-listItem"><a href="/articles" class="mainMenu-Link">Articles</a></li>
+        <li class="mainMenu-listItem"><a href="/site-development" class="mainMenu-Link">Site Development</a></li>
+    </ul>
+</nav>
+
+<style>
+.mainMenu {
+    display: inline;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.mainMenu-list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 1rem;
+}
+
+.mainMenu-listItem {
+    list-style: none;
+    color: var(--color-white);
+}
+
+.mainMenu-listItem a {
+    color: var(--color-white);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+}
+
+.mainMenu-listItem a:visited {
+    color: var(--color-white);
+}
+
+</style>
