@@ -1,8 +1,11 @@
 ---
 const { sectionHeading, isSectionDark } = Astro.props;
+console.log("isSectionDark", sectionHeading, isSectionDark);
+
+const setSectionDark = isSectionDark ? "section-dark": "";
 ---
 
-<section class=`section ${isSectionDark && "section-dark"}`>
+<section class=`section ${setSectionDark}`>
   <h2>{sectionHeading}</h2>
   <slot />
 </section>
