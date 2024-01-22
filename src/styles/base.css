@@ -3,7 +3,8 @@
     --color-banner: #0a1930;
     --color-light: #7c97a2;
     --color-white: #fffff0ff;
-    --color-cta: #fe0042;
+    /* --color-cta: #fe0042; */
+    --color-cta: hsl(216, 64%, 34%);
     --color-border: #969696;
 
     --prussian-blue: #13293dff;

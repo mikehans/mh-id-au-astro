@@ -21,7 +21,15 @@
     display: flex;
     flex-direction: row;
     padding: 0;
-    gap: 1rem;
+    gap: 0.5rem;
+}
+
+@media (max-width: 750px) {
+    .mainMenu-list{
+        flex-direction: column;
+        
+    }
+
 }
 
 .mainMenu-listItem {
@@ -35,7 +43,11 @@
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+}
+
+.mainMenu-list a:hover {
+    background-color: rgb(114, 119, 132);
 }
 
 .mainMenu-listItem a:visited {
