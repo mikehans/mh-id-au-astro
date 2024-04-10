@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import Banner from "@components/Banner.astro";
+
+export async function getStaticPaths(){
+    const postEntries = await getCollection('posts');
+
+    return postEntries.map(entry => ({
+        params: {slug: entry.slug}, props: {entry}
+    }));
+}
+
+const {entry} = Astro.props;
+const e = await entry.render();
+console.log('e', e)
+
+const pageTitle=`${e.remarkPluginFrontmatter.title}`;
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <Banner />
+    <Section sectionHeading="">                   
+        <e.Content />
+    </Section>
+</BaseLayout>

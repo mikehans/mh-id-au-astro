@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Section from "@components/Section.astro";
 import CardList from "@components/CardList.astro";
@@ -6,40 +8,8 @@ import ShortBanner from "@components/ShortBanner.astro";
 
 const pageTitle = "Articles";
 
-const cards = [
-  {
-    title: "Card 1 here",
-    pubDate: "23 Mar 2023",
-    imageUrl: "https://placehold.co/600x400",
-    description:
-      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
-    readMoreLink: "#",
-  },
-  {
-    title: "Card 2 here",
-    pubDate: "21 Mar 2023",
-    imageUrl: "https://placehold.co/600x400",
-    description:
-      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
-    readMoreLink: "#",
-  },
-  {
-    title: "Card 3 here",
-    pubDate: "26 Mar 2023",
-    imageUrl: "https://placehold.co/600x400",
-    description:
-      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
-    readMoreLink: "#",
-  },
-  {
-    title: "Card 4 here",
-    pubDate: "30 Mar 2023",
-    imageUrl: "https://placehold.co/600x400",
-    description:
-      "Have you ever been unable to disintermediate your feature set? Free? Think B2C2B.",
-    readMoreLink: "#",
-  },
-];
+const allPosts = await getCollection('posts');
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -57,6 +27,6 @@ const cards = [
         I don't have production constraints, so they come and go.
     </p>
 
-    <CardList cardListItems={cards} />
+    <CardList cardListItems={allPosts} />
   </Section>
 </BaseLayout>

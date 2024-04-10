@@ -2,13 +2,18 @@
 import Card from "./Card.astro";
 
 const {cardListItems} = Astro.props;
-
+console.log('cardListItems', cardListItems)
 ---
 
 <ul class="cardList">
   {
     cardListItems.map(card => (
-        <Card title={card.title} pubDate={card.pubDate} imageUrl={card.imageUrl} description={card.description} readMoreLink={card.readMoreLink} />
+        <Card title={card.data.title} 
+              pubDate={card.data.pubDate } 
+              imageUrl={card.data.imageUrl} 
+              description={card.data.description} 
+              readMoreLink={`articles/${card.slug}`}
+         />
     ))
   }
 </ul>
