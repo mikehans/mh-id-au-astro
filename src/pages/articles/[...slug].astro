@@ -3,10 +3,11 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Section from "@components/Section.astro";
-import Banner from "@components/Banner.astro";
+// import Banner from "@components/Banner.astro";
+import ShortBanner from "@components/ShortBanner.astro";
 
 export async function getStaticPaths(){
-    const postEntries = await getCollection('posts');
+    const postEntries = await getCollection('articles');
 
     return postEntries.map(entry => ({
         params: {slug: entry.slug}, props: {entry}
@@ -21,7 +22,7 @@ const pageTitle=`${e.remarkPluginFrontmatter.title}`;
 
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <Banner />
+    <ShortBanner />
     <Section sectionHeading="">                   
         <e.Content />
     </Section>
