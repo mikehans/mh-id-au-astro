@@ -131,3 +131,8 @@ a:visited {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.px0-5 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

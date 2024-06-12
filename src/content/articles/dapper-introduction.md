@@ -7,6 +7,8 @@ imageUrl: '/img/dapper.jpg'
 author: "Mike Hansford"
 type: "project"
 publish: true
+tags:
+  - C#
 ---
 I've heard a lot about [Dapper](). It's promoted as a micro-ORM and reputed to be somewhat faster than Entity Framework. It's supported by Stack Exchange and they use it regularly (along with Entity Framework). 
 

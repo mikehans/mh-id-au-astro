@@ -13,6 +13,7 @@ const { articleListItems: articleListItems } = Astro.props;
         imageUrl={card.data.imageUrl || "/img/article.jpg"}
         description={card.data.description}
         readMoreLink={`articles/${card.slug}`}
+        tags={card.data.tags}
       />
     ))
   }
