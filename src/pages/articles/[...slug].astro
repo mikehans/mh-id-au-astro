@@ -16,7 +16,6 @@ export async function getStaticPaths(){
 
 const {entry} = Astro.props;
 const e = await entry.render();
-console.log('e', e)
 
 const pageTitle=`${e.remarkPluginFrontmatter.title}`;
 

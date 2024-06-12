@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Section from "@components/Section.astro";
-// import CardList from "@components/CardList.astro";
 import ShortBanner from "@components/ShortBanner.astro";
 import ArticleList from "@components/ArticleList.astro";
 
@@ -12,8 +11,6 @@ const pageTitle = "Articles";
 const allPosts = await getCollection('articles');
 
 const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-// console.log("the date as a date:", new Date( allPosts[0].data.date));
-// console.log("compare 2 dates", new Date(allPosts[0].data.date), new Date(allPosts[1].data.date), new Date(allPosts[1].data.date) - new Date(allPosts[0].data.date))
 ---
 
 <BaseLayout pageTitle={pageTitle}>

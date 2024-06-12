@@ -1,32 +1,17 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Section from "@components/Section.astro";
 import ShortBanner from "@components/ShortBanner.astro";
 
 const pageTitle = "Site Development";
 
-const testData = [
-  {
-    title: "Log 1",
-    date: "12 Mar 2023",
-    content: "This is stuff that happened",
-  },
-  {
-    title: "Log 2",
-    date: "22 Mar 2023",
-    content: "This is stuff that happened",
-  },
-  {
-    title: "Log 3",
-    date: "2 Mar 2023",
-    content: "This is stuff that happened",
-  },
-  {
-    title: "Log 4",
-    date: "14 Mar 2023",
-    content: "This is stuff that happened",
-  },
-];
+const allLogs = await getCollection('siteLogs', ({data}) => data.publish === true);
+const sortedLogs = allLogs.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+console.log(sortedLogs)
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -39,11 +24,12 @@ const testData = [
 
     <ul class="logList">
       {
-        testData.map((item) => (
+        sortedLogs.map(async (item) => (
+          
           <li class="listItem">
-            <h3 class="listItem-title">{item.title}</h3>
-            <p class="listItem-date">{item.date}</p>
-            <p class="listItem-content">{item.content}</p>
+            <h3 class="listItem-title">{item.data.title}</h3>
+            <p class="listItem-date">{item.data.date}</p>
+            <p class="listItem-content">{item.body}</p>
           </li>
         ))
       }
