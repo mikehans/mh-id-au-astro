@@ -79,10 +79,13 @@ p {
 
 a {
     color: var(--color-fg);
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 a:hover {
-    background-color: var(--color-cta);
+    transform: scale(110%);
 }
 
 a:visited {
@@ -135,4 +138,9 @@ a:visited {
 .px0-5 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.px1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
