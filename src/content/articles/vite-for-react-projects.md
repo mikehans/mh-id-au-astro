@@ -4,6 +4,7 @@ date: "2022-12-06"
 title: "Using Vite for React Projects"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - dev tools
     - React

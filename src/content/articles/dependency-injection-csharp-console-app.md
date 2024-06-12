@@ -5,6 +5,7 @@
   description: "A barebones setup for configuring the default dependency injection container in a C# console app."
   author: "Mike Hansford"
   type: "post"
+  publish: true
   tags:
     - C#
     - Dependency Injection

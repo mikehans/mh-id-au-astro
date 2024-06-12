@@ -5,6 +5,7 @@ title: "Working with Strapi Single Types"
 description: "A discussion on pros and cons of using single types"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - Strapi
 ---

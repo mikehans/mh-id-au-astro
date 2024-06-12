@@ -4,6 +4,7 @@ date: "2020-12-20"
 title: "Why am I developing my own site instead of just using something like Squarespace?"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - site development
 ---

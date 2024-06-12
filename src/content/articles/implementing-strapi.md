@@ -5,6 +5,7 @@ title: "Implementing Strapi.io"
 description: "Initial experiences of implementing Strapi.io, a headless CMS as the content manager for my site."
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - Strapi
 ---

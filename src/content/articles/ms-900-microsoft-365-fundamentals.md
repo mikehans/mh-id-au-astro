@@ -5,6 +5,7 @@ title: "Microsoft 365 Fundamentals Exam"
 author: "Mike Hansford"
 imageUrl: "/img/matrixything.jpg"
 type: "post"
+publish: true
 tags:
     - MS-900
     - Microsoft 365

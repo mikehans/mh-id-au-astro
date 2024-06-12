@@ -6,6 +6,7 @@ description: "Documents an issue with an MS Learn module for Azure Functions and
 author: "Mike Hansford"
 imageUrl: "/img/azure-kingfisher2.jpg"
 type: "post"
+publish: true
 tags:
     - Azure
 ---

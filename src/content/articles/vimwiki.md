@@ -4,6 +4,7 @@ date: "2021-02-22"
 title: "Setting up vimwiki for note-taking"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - dev tools
     - Vim

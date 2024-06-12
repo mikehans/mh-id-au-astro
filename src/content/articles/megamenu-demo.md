@@ -6,6 +6,7 @@ description: "It's time I built a megamenu component from scratch"
 imageUrl: "/img/css.jpg"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - CSS
     - web dev

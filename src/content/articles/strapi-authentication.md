@@ -5,6 +5,7 @@ title: "Authentication in Strapi"
 description: "Trials in setting up authentication for Strapi for use (initially) by NextJS."
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - Strapi
 ---

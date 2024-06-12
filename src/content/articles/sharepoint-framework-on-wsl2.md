@@ -4,6 +4,7 @@ date: "2020-10-28"
 title: "Developing with SharePoint Framework on WSL2"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - SharePoint Framework
     - WSL

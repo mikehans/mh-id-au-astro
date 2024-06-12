@@ -4,6 +4,7 @@ date: "2020-11-10"
 title: "Site Development: Visual Design"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - site development
     - visual design

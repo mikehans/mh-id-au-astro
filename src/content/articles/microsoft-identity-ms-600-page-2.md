@@ -5,6 +5,7 @@ title: "Microsoft Identity (MS-600) - Register an application"
 author: "Mike Hansford"
 imageUrl: "/img/matrixything.jpg"
 type: "post"
+publish: true
 tags:
     - MS-600
     - Microsoft Identity

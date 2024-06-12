@@ -6,6 +6,7 @@ description: "Discusses lessons learned while training with Cosmos DB for AZ-204
 imageUrl: "/img/blueoptic.jpg"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - Azure
     - AZ-204

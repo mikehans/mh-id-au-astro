@@ -6,6 +6,7 @@ description: "I'm adopting NextJS, a framework built on ReactJS for developing w
 imageUrl: "/img/blurrycode.jpg"
 author: "Mike Hansford"
 type: "post"
+publish: true
 tags:
     - NextJS
 ---
