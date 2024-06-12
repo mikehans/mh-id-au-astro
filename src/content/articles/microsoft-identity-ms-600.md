@@ -11,7 +11,8 @@ tags:
     - Microsoft Identity
     - Microsoft 365
 ---
-## Summary of what I think matters so far
+## Microsoft Identity (MS-600)
+### Summary of what I think matters so far
 OK, so Microsoft Identity is a large component of MS-600: Building Applications and Solutions with Microsoft 365 Core Services. It's the exam you need for the <a href="https://docs.microsoft.com/en-us/learn/certifications/m365-developer-associate" target="_blank" rel="noreferrer"> Microsoft 365 Certified: Developer Associate certification</a>. 
 
 Identity is a large and complex domain of knowledge, so I want to unpack it a bit here. Importantly, what is the required knowledge and what are the constraints for the exam?
@@ -19,7 +20,7 @@ Identity is a large and complex domain of knowledge, so I want to unpack it a bi
 This was going to be a single page, but it long quickly. So, refer to the Table of Contents below.
 
 
-## Contents
+### Contents
 1. [Register an application](microsoft-identity-ms-600-page-2)
 1. Implement Authentication
 1. Configure Permissions to Consume an API
@@ -27,7 +28,7 @@ This was going to be a single page, but it long quickly. So, refer to the Table 
 1. Implement Authorisation in an API
 1. Create a Service to Access Microsoft Graph
 
-## Glossary
+### Glossary
 * Account type
 * Delegated permissions
 * Consent
@@ -45,6 +46,6 @@ This was going to be a single page, but it long quickly. So, refer to the Table 
 * Topology
     * relates to whether the application is a SPA, web app, web API, mobile or desktop app, or daemon app
 
-## Resources
+### Resources
 The <a href="https://docs.microsoft.com/en-us/learn/paths/m365-identity-associate/" target="_blank" rel="noreferrer">Microsoft Learn path for Identity</a> is a good starting point.
 The <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/" target="_blank" rel="noreferrer">Azure Active Directory documentation</a> is also really important.

@@ -12,12 +12,12 @@ tags:
     - AZ-204
     - Cosmos DB
 ---
-
+## Azure Cosmos DB with .NET SDK
 Cosmos DB is one of the topics for the AZ-204 domain "Develop for Azure Storage". This article unpacks some of the lessons from exploring the scope of this requirement with respect to the SDK. 
 
 As of the time of writing, I am yet to attempt the exam. The current version of the exam is the April 2023 update.
 
-## Core SDK classes
+### Core SDK classes
 The following classes appear to be the key classes to understand:
 * ```CosmosClient```
     * ```CosmosClientOptions```
@@ -30,7 +30,7 @@ The exam readiness videos repeatedly state that this is not a syntax exam. So, t
 
 To assist in understanding these classes, I completed a [a set of C# exercises](https://github.com/mikehans/az-cosmosdb-sdk-exercises) to explore the relationships and key operations.
 
-### SDK exercises
+#### SDK exercises
 The project connects to CosmosDB database (it needs to exist prior to running the project), bulk uploads some data, modifies a record, deletes a record and queries the database. 
 
 I used a bulk upload rather than a single create item operation as a bulk upload is essentially a group of individual create operations, executed as a list of Tasks. Each task is a call to ```Container.CreateItemAsync()```, which is the way you write a single record. The ```CosmosClient``` also requires some configuration with an object of type ```CosmosClientOptions```.
@@ -59,8 +59,8 @@ There was a problem with ```DbManagement.EnsureDbCreated()``` and ```DbManagemen
 
 I have, however left these methods in the code for reference. They are just not being executed.
 
-## Core operations (add, query, update, delete)
-### Add
+### Core operations (add, query, update, delete)
+#### Add
 ```csharp
     container.CreateItemAsync(item, new PartitionKey(item.id))
 ```
@@ -69,7 +69,7 @@ In the demo project, I am reading a collection of categories in from a JSON file
 
 In the code snippet above, ```item``` represents a ```CategoryDTO``` object. I also need to new up a ```PartitionKey``` object and pass in the value being used. My container design in this case puts every category in its own logical partition.
 
-### Query
+#### Query
 With queries, there are two general options:
 1. ```GetItemQueryIterator<T>```, and
 1. ```GetItemLinqQueryable<T>```
@@ -122,7 +122,7 @@ The third example uses ```GetItemLinqQueryable<T>``` to construct an IQueryable 
     }
 ```
 
-### Update
+#### Update
 There are two methods that can be used to update a document:
 1. ```UpsertItemAsync(objectToUpsert, PartitionKey)```
 1. ```ReplaceItemAsync<T>(T, string id, PartitionKey)```
@@ -162,7 +162,7 @@ EG.
         new RequestOptions { AccessCondition = ac });
 ```
 
-### Delete
+#### Delete
 Deleting an item is done with the ```DeleteItemAsync<T>(string id, PartitionKey)``` method. You delete an item by passing in the ID of the item and its partition key. These two properties are the standard two properties you need to uniquely identify an item in a Cosmos DB Core API database.
 
 ```csharp
@@ -172,7 +172,7 @@ Deleting an item is done with the ```DeleteItemAsync<T>(string id, PartitionKey)
     );
 ```
 
-## Wrapping up
+### Wrapping up
 This article is constrained to developing an understanding of the SDK operations required for the AZ-204 exam.
 
 Pay attention to the exam readiness videos. They reminded me that it's no only the SDK that matters. For Cosmos DB, you also need to understand topics related to:

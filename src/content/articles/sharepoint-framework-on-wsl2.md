@@ -9,7 +9,7 @@ tags:
     - SharePoint Framework
     - WSL
 ---
-## Running SharePoint Framework on WSL2
+## Developing with SharePoint Framework on WSL2
 OK, here's a quick one for today...
 
 Microsoft doesn't seem to discuss developing SharePoint Framework with WSL2. So far I haven't had any issues with it, so it seems about time to discuss it.

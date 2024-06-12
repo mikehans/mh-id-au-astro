@@ -10,14 +10,15 @@
     - C#
     - Dependency Injection
 ---
+## Dependency Injection Setup for .NET Console Application
 This post describes the foundational steps to configure the Microsoft dependency injection container for a C# console application.
 
-## Nuget
+### Nuget
 Once you have a basic console application, you need to install the following Nuget packages:
 * Microsoft.Extensions.Hosting
 * Microsoft.Extensions.DependencyInjection
 
-## Setting up the Host
+### Setting up the Host
 The following code is the barest basics for configuring the ```Microsoft.Extensions.Hosting.Host```.
 
 ```csharp
@@ -49,10 +50,10 @@ That's a lot of useful stuff that we don't have to do by hand. It means we can d
 
 Finally, we need to call ```Build()```. Without this, we will create an instance of ```IHostBuilder```. ```Build()``` belongs to the ```IHostBuilder``` interface and we use it to create an instance of ```IHost```. 
 
-### Documentation
+#### Documentation
 Microsoft provides documentation for the dependency injection container [here](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection).
 
-## Injecting services
+### Injecting services
 From here, things are pretty much identical to configuring the DI container in a WebAPI app. 
 
 Chaining on the ```ConfigureServices()``` method allows you to configure the dependency injection container. In the sample below, I am injecting two services.
@@ -85,7 +86,7 @@ Chaining on the ```ConfigureServices()``` method allows you to configure the dep
 
 ```
 
-## Want to see it in use?
+### Want to see it in use?
 I have created a sample console application that is using the Microsoft dependency injection container. [Here](https://github.com/mikehans/TodoList-sql2/blob/master/TodoList-SQL2/Program.cs) is the direct link to the Program.cs file.
 
 This demo application uses Dapper to access a database. There are a couple of issues right now relating to the creation of the in memory SQLite DB but otherwise it illustrates of using Dapper and configuring the database connection using dependency injection.

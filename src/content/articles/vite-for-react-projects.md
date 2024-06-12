@@ -10,11 +10,12 @@ tags:
     - React
     - Vite
 ---
+## Using Vite for React Projects
 Vite (https://vitejs.dev) is a build tool that seems to be in use in the Vue community. It competes with other tools like Webpack.
 
 It is based on Rollup and is lightning fast. During my early tests it has finished building so quickly that, expecting the build to take a while (thanks to my experience with Create React App); not seeing stuff scrolling past on the console I've thought that the build has broken, only then to see a message saying my site is available on localhost:3000...
 
-## Getting started
+### Getting started
 Start with the guide [here](https://vitejs.dev/guide/) 
 
 Running ```npm create vite@latest ``` will start the wizard which will step you through everything.

@@ -13,6 +13,7 @@ tags:
     - OpenID Connect
     - OAuth 2.0
 ---
+## Microsoft Identity (MS-600) - Register an application
 [Return to Table of Contents for the Microsoft Identity (MS-600) posts](microsoft-identity-ms-600)
 
 This is referring to the process of creating the application object in AAD.

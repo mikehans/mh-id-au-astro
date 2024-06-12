@@ -11,7 +11,7 @@ tags:
     - Neovim
     - Windows 10
 ---
-## Up and running with vimwiki
+## Setting up vimwiki for note-taking
 Recently, I went looking for a no frills, low friction solution for technical note-taking. For years I've been strongly attached to OneNote, starting with my university studies and onwards through my technical work. For lectures it was great! I could print the lecture slides into a notebook and annotate them freely. It could find words in pictures and I could search a notebook for a word in a picture. Awesome. However, it's always left a bit to be desired when writing code - auto-correcting initial capitals, undesirable spell-checking of my code, etc. 
 
 Recently I've come across <a href="https://vimwiki.github.io/" rel="noreferrer noopener" target="_blank">vimwiki</a>. It's a plug-in for vim that adds some standard wiki functions and a pretty easy markup. I can easily create hyperlinks to web pages or other vimwiki pages, create code, lists, tables, headings, tags and add images. You don't get to see the image in vim - you need to convert to something like HTML for that to happen. vimwiki also includes functionality to export to HTML as well. I haven't tested that part yet and it may be adequate. If I want something different, pandoc is also available and appears to be widely used by others who use vim for note-taking. I use <a href="https://github.com/junegunn/vim-plug" rel="noreferrer noopener" target="_blank">vim-plug</a> for my plug-in management so I added `Plug 'vimwiki/vimwiki'` into my init.vim file and ran `:PlugInstall` to install it.

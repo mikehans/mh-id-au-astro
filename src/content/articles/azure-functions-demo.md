@@ -10,8 +10,8 @@ publish: true
 tags:
     - Azure
 ---
-# Azure Functions Demo Confusion on MS Learn
-## The problem
+## Azure Functions Demo Confusion on MS Learn
+### The problem
 
 I'm working through the exercise Create an Azure Function by using Visual Studio Code.
 
@@ -25,7 +25,7 @@ System.Private.CoreLib: Could not load type 'System.Diagnostics.DebuggerStepThro
 Value cannot be null. (Parameter 'provider')
 ```
 
-## Fix
+### Fix
 
 The problem occurs because there is a mismatch between the Azure Core Tools version and the VS Code extension default.
 

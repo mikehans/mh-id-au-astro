@@ -8,6 +8,7 @@ author: "Mike Hansford"
 type: "project"
 publish: true
 ---
+## Azure Functions Exercises
 In my pursuit of my Azure Developer certification, I have built a series of exercises to learn to create Azure Functions in C#. 
 
 The Github repo for this project can be found here: https://github.com/mikehans/az-funcs-exercise.

@@ -11,11 +11,11 @@ tags:
     - CSS
     - web dev
 ---
-# Megamenu Demo (from scratch)
-## Why?
+## Megamenu Demo (from scratch)
+### Why?
 It's one thing to use a component that someone else has built. It's another thing to know how it works. This is the fundamental difference between "someone who makes websites" and a professional web developer. So, it was high time I built my own - no frameworks, just me, HTML, CSS and JavaScript. Oh and [Astro](https://astro.build). Coz I want to get some experience using it.
 
-## The demo's requirements
+### The demo's requirements
 I wanted to build a megamenu that would / could be W3C ARIA compliant. Particularly, I wanted good keyboard control. I haven't tested it against a screenreader. It could be interesting to do so but this is a thing that is firmly in the "maybe later" column.
 
 For keyboard control, I referred to the [ARIA Authoring Practices Guide section on the Menu and Menubar Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/). Specifically, I referred to the (Navigation Menubar Example)[https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/] for a description of the keyboard controls.
@@ -41,7 +41,7 @@ The wrapping ```nav``` element has an ```aria-label``` set to "Main menu", so a 
 
 In general for items that visually are a list, you gain benefits from making them a semantic list. Sure, there is likely to be some additional CSS but it's hardly a burden, especially when you gain things for free with the screenreader.
 
-## Constraints
+### Constraints
 Many of my constraints are a function of time. I just needed to get to "done enough".
 
 * Keyboard navigation isn't complete 
@@ -54,8 +54,8 @@ Many of my constraints are a function of time. I just needed to get to "done eno
 * I am only supporting a single list in the sub-menu
     * One option would be to support many lists, each with their own headings in the megamenu. This would look nice and help to break it up visually
 
-## Key lessons
-### Kyboard support
+### Key lessons
+#### Keyboard support
 Adding additional keyboard support is a lot of work. While you do get _some_ keyboard support out of the box, it is very limited.
 
 Adding the ability to use the arrow keys requires thought and work to program but the result is well worth it. I would definitely not use my code as is - it's very much still demoware and could use refactoring but it's definitely a good start.
