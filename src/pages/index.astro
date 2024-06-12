@@ -7,8 +7,13 @@ import CardList from "@components/CardList.astro";
 
 const pageTitle = "Home";
 
-const allPosts = await getCollection('posts');
+// const allPosts = await getCollection('posts');
 
+const allPosts = await getCollection('articles');
+
+const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+const latestPosts = sortedPosts.slice(0,4);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -25,11 +30,11 @@ const allPosts = await getCollection('posts');
   </Section>
   
   <Section sectionHeading="My Latest Posts" isSectionDark>
-	<CardList cardListItems={allPosts} />
+	<CardList cardListItems={latestPosts} />
 
   </Section>
 
-  <Section sectionHeading="Test section">
+  <!-- <Section sectionHeading="Test section">
 	<p>This is a section.</p>
 	<p>This section has a second paragraph.</p>
   </Section>
@@ -38,5 +43,5 @@ const allPosts = await getCollection('posts');
   <Section sectionHeading="Test section" isSectionDark>
 	<p>This is a section.</p>
 	<p>This section has a second paragraph.</p>
-  </Section>
+  </Section> -->
 </BaseLayout>
