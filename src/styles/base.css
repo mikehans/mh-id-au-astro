@@ -26,6 +26,8 @@ body {
     line-height: 1.8;
     background-color: var(--color-white);
     color: var(--color-fg);
+    display: flex;
+    justify-content: flex-start;
 }
 
 h1,
@@ -90,6 +92,10 @@ a:hover {
 
 a:visited {
     color: var(--color-fg);
+}
+
+.container {
+    max-width: 1400px;
 }
 
 .section {
