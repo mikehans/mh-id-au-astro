@@ -2,7 +2,7 @@
 date: "2023-04-09"
 slug: "dapper-introduction"
 title: "Dapper Introduction"
-description: 'Learning exercises in Dapper'
+description: 'Learning exercises in Dapper, a micro-ORM for .NET.'
 imageUrl: '/img/dapper.jpg'
 author: "Mike Hansford"
 type: "project"
