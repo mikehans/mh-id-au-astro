@@ -5,12 +5,22 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Section from "@components/Section.astro";
 import ShortBanner from "@components/ShortBanner.astro";
 import ArticleList from "@components/ArticleList.astro";
+import CategoryList from "@components/CategoryList.astro";
+import ArticleListReact from "@components/ArticleListReact.js";
 
 const pageTitle = "Articles";
 
 const allPosts = await getCollection('articles',  ({data}) => data.publish === true);
 
 const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+const uniqueTags = new Set();
+
+sortedPosts.forEach(item => item.data.tags && item.data.tags.forEach(t => uniqueTags.add(t)));
+console.log(uniqueTags)
+
+const items = [...uniqueTags.values()].sort();
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -28,7 +38,13 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.d
         I don't have production constraints, so they come and go.
     </p>
 
-    <ArticleList articleListItems={sortedPosts} />
-    <!-- <CardList cardListItems={allPosts} /> -->
+    <ArticleListReact client:load items={sortedPosts} />
+
+    <!-- <div>
+      <h3>Categories</h3>
+      <p>Click on a category to filter by that category.</p>
+      <CategoryList list={items} />
+    </div>-->
+    
   </Section>
 </BaseLayout>

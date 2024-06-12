@@ -1,32 +1,4 @@
----
-import type { Article } from '@types/Article';
-import Card from "./Card2.astro";
-
-interface Props {
-  articleListItems: Array<Article>;
-}
-
-const { articleListItems } = Astro.props;
-
----
-
-<ul class="articleList">
-  {
-    articleListItems.map((card) => (
-      <Card
-        title={card.data.title}
-        pubDate={card.data.date}
-        imageUrl={card.data.imageUrl || "/img/article.jpg"}
-        description={card.data.description}
-        readMoreLink={`/articles/${card.slug}`}
-        tags={card.data.tags}
-      />
-    ))
-  }
-</ul>
-
-<style is:global>
-  .articleList {
+.articleList {
     padding-left: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,4 +56,3 @@ const { articleListItems } = Astro.props;
     background: linear-gradient(315deg, rgba(140,144,152,1) 0%, rgba(238,238,238,1) 100%); 
     grid-column: span 1;
   }
-</style>

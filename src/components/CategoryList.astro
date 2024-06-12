@@ -1,0 +1,31 @@
+---
+const { list } = Astro.props;
+---
+
+<ul class="categoryList">
+    {
+     list.map(it => <li class="category">{it}</li>)
+    }
+ </ul>
+
+ <style>
+    .categoryList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding-left: 0;
+    }
+
+    .category {
+        list-style-type: none;
+        border: 2px solid #ac8c91;
+        border-radius: 1rem;
+        background-color: #ac8c91;
+        color: white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+ </style>

@@ -1,0 +1,22 @@
+.categoryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: 0;
+}
+
+.category {
+    list-style-type: none;
+}
+
+.filter-button {
+    cursor: pointer;
+    border: 2px solid #ac8c91;
+    border-radius: 1rem;
+    background-color: #ac8c91;
+    padding: 0.5rem;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
