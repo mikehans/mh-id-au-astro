@@ -1,11 +1,12 @@
 ---
-
+import FormattedDate from "./FormattedDate.astro";
 const {title, pubDate, imageUrl, description, readMoreLink} = Astro.props;
+console.log('pubDate: ', pubDate)
 ---
 
 <li class="cardList-card has-darkBackground">
   <h3 class="cardList-cardHeading mx0-5">{title}</h3>
-  <p class="cardList-cardDate mx0-5 my0-5">{pubDate}</p>
+  <p class="cardList-cardDate mx0-5 my0-5">Published: <FormattedDate date={pubDate} /> </p>
   <div class="cardList-cardImageContainer">
     <img src={imageUrl} class="cardList-cardImage" />
   </div>

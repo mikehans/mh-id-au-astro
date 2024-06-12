@@ -7,8 +7,6 @@ import CardList from "@components/CardList.astro";
 
 const pageTitle = "Home";
 
-// const allPosts = await getCollection('posts');
-
 const allPosts = await getCollection('articles');
 
 const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
@@ -30,6 +28,7 @@ const latestPosts = sortedPosts.slice(0,4);
   </Section>
   
   <Section sectionHeading="My Latest Posts" isSectionDark>
+  <p>All my articles can be viewed from the<a href="/articles" class="light-text">Articles</a>page. </p>
 	<CardList cardListItems={latestPosts} />
 
   </Section>
@@ -45,3 +44,9 @@ const latestPosts = sortedPosts.slice(0,4);
 	<p>This section has a second paragraph.</p>
   </Section> -->
 </BaseLayout>
+
+<style>
+  .light-text {
+    color: white;
+  }
+</style>
