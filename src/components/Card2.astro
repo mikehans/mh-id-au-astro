@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "@components/FormattedDate.astro";
+import TagList from "@components/TagList.astro";
 
 const { title, pubDate, imageUrl, description, readMoreLink } = Astro.props;
 const tags: Array<string> = Astro.props.tags;
@@ -16,7 +17,7 @@ const tags: Array<string> = Astro.props.tags;
     {description}
   </p>
   <p class="cardList-tagList">
-    {tags && tags.map((tag) => <span class="cardList-tag px0-5">{tag}</span>)}
+    <TagList tags={tags} />
   </p>
   <a class="cardList-cardLink mx0-5 my0-5" href={readMoreLink}>Read more</a>
 </li>
@@ -78,13 +79,5 @@ const tags: Array<string> = Astro.props.tags;
     flex-basis: 40px;
   }
 
-  .cardList-tag {
-    border: 2px solid #ac8c91;
-    border-radius: 1rem;
-    background-color: #ac8c91;
-    color: white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 </style>
