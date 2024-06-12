@@ -1,0 +1,80 @@
+---
+import Card from "./Card2.astro";
+
+const { articleListItems: articleListItems } = Astro.props;
+---
+
+<ul class="articleList">
+  {
+    articleListItems.map((card) => (
+      <Card
+        title={card.data.title}
+        pubDate={card.data.date}
+        imageUrl={card.data.imageUrl || "/img/article.jpg"}
+        description={card.data.description}
+        readMoreLink={`articles/${card.slug}`}
+      />
+    ))
+  }
+</ul>
+
+<style is:global>
+  .articleList {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .articleList > li.cardList-card {
+    list-style-type: none;
+    grid-column: span 2;
+  }
+
+  .articleList > li.cardList-card > .cardList-cardImageContainer {
+    display: none;
+  }
+
+  .articleList > li.cardList-card:first-child {
+    background: var(--color-banner);
+    background: linear-gradient(
+      138deg,
+      var(--color-banner) 0%,
+      #727784 70%,
+      var(--color-white) 100%
+    );
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .articleList > li.cardList-card:first-child > * {
+    color: white;
+  }
+
+   .articleList > li.cardList-card:nth-child(2) {
+    /* background-color: rgb(197, 193, 197); */
+
+    background: rgb(140,144,152);
+    background: linear-gradient(315deg, rgba(140,144,152,1) 0%, rgba(238,238,238,1) 100%); 
+    grid-column: span 1;
+  }
+
+  .articleList > li.cardList-card:nth-child(3) {
+    /* background-color: cyan; */
+    background: rgb(140,144,152);
+    background: linear-gradient(315deg, rgba(140,144,152,1) 0%, rgba(238,238,238,1) 100%); 
+    grid-column: span 1;
+  }
+  .articleList > li.cardList-card:nth-child(4) {
+    /* background-color: blueviolet; */
+    background: rgb(140,144,152);
+    background: linear-gradient(315deg, rgba(140,144,152,1) 0%, rgba(238,238,238,1) 100%); 
+    grid-column: span 1;
+  }
+  .articleList > li.cardList-card:nth-child(5) {
+    /* background-color: peru; */
+    background: rgb(140,144,152);
+    background: linear-gradient(315deg, rgba(140,144,152,1) 0%, rgba(238,238,238,1) 100%); 
+    grid-column: span 1;
+  }
+</style>
