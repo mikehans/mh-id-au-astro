@@ -2,6 +2,8 @@
 import Card from "./Card2.astro";
 
 const { articleListItems: articleListItems } = Astro.props;
+
+console.log(articleListItems)
 ---
 
 <ul class="articleList">
@@ -12,7 +14,7 @@ const { articleListItems: articleListItems } = Astro.props;
         pubDate={card.data.date}
         imageUrl={card.data.imageUrl || "/img/article.jpg"}
         description={card.data.description}
-        readMoreLink={`articles/${card.slug}`}
+        readMoreLink={`/articles/${card.slug}`}
         tags={card.data.tags}
       />
     ))
