@@ -2,7 +2,7 @@
 slug: 'megamenu-demo'
 date: "2023-07-31"
 title: "Megamenu Demo From Scratch"
-description: "It's time I build a megamenu component from scratch"
+description: "It's time I built a megamenu component from scratch"
 imageUrl: "/img/css.jpg"
 author: "Mike Hansford"
 type: "post"
