@@ -5,7 +5,7 @@
     date: "2024-07-09"
     author: "Mike Hansford"
     type: "post"
-    publish: false
+    publish: true
     tags:
         - C#
         - .NET
