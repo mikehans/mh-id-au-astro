@@ -72,16 +72,6 @@ So seeing as we can't create a new tree from outside the Aggregate, the forest c
 
 
 ## Discussion
-* design your aggregates from the aggregate root in
-    * I created a CategoryTree first then wrote unit tests for it. 
-    * in doing this, I created its methods as public and created leakage as a result
-    * undoing the leakage took a lot of work
-    * I think if I started with the aggregate root and worked inwards I wouldn't have create this leakage
-* no recursion
-* basic data structures
-* I don't like how a forest is created in the test suite. CategoryForest really should contain a constructor / method that takes any number of trees (whatever representation) and creates a forest from them.
-
-
 ### Making a tree from a dictionary
 A tree implies recursion. I'm not very good at recursion - isn't that one of the few hard problems in comp sci, along with naming things (?) - so I looked for an alternate solution.
 
