@@ -2,7 +2,7 @@ name: Merge article branch (publish an article)
 run-name: Test run
 on: 
   schedule: 
-    - cron: '32 12 9 7 *'
+    - cron: '36 0 9 7 *'
 jobs:
   Test-An-Action:
     runs-on: ubuntu-latest
