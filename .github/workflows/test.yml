@@ -2,10 +2,10 @@ name: Merge article branch (publish an article)
 run-name: Test run
 on: 
   schedule: 
-    - cron: '15 22 7 10 *'
+    - cron: '30 12 7 9 *'
 jobs:
   Test-An-Action:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This job is triggered to run at 10:15pm on 10 Jul"
+      - run: echo "This job is triggered to run at 10:30pm on 9 Jul (AEST)"
       
