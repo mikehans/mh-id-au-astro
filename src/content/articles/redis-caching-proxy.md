@@ -6,7 +6,7 @@ description: "Loud complaints of an old man yelling at the clouds about lousy ca
 author: "Mike Hansford"
 imageUrl: "/img/azure-kingfisher2.jpg"
 type: "post"
-publish: false
+publish: true
 tags:
     - Azure
     - C#
