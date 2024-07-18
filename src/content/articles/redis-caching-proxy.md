@@ -16,7 +16,7 @@ tags:
     - design patterns
 ---
 # So what's my beef here?
-Over and over again, I see demos / doco showing how easy it is to add a cache in front of a database. The code to add the cache is just thrown directly onto the methods accessing / writing the data. It seems we've forgotton or thrown out the idea of design patterns. Like they are a waste of time or something. Or perhaps, they're only demos. Demos become the documentation and get implemented because there are devs who simply don't know any better. (Insert old man yelling at the clouds).In the interested of keeping my head-banging for heavy metal, I wrote my own demo.
+Over and over again, I see demos / doco showing how easy it is to add a cache in front of a database. The code to add the cache is just thrown directly onto the methods accessing / writing the data. It seems we've forgotton or thrown out the idea of design patterns, like they are a waste of time or something. Or perhaps, they're only demos, so certain things don't matter. Demos become the documentation and get implemented because there are devs who simply don't know any better. (Insert old man yelling at the clouds). So in the interests of keeping my head-banging for heavy metal, I've written my own demo.
 
 ## Proxy pattern intent
 The intent of the Proxy pattern is to create a surrogate that controls access to another object. Wow, that sounds a lot like what I want to do here. Specifically, I want a cache that intercepts database access and tries to fulfil any data requests from the cache first. If the data I want is there I'll return that. Otherwise I'll send the request on to the database and cache that data on the way back out.
