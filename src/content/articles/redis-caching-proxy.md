@@ -16,10 +16,10 @@ tags:
     - design patterns
 ---
 # So what's my beef here?
-Over and over again, I see demos / doco showing how easy it is to add a cache in front of a database. The code to add the cache is just thrown directly onto the methods accessing / writing the data. It seems we've forgotton or thrown out the idea of design patterns. Like they are a waste of time or something. Or perhaps, they're only demos. Demos become the documentation and get implemented because there are devs who simply don't know any better. (Insert old man yelling at the clouds). I'd rather keep my head-banging for heavy metal. So I wrote my own demo.
+Over and over again, I see demos / doco showing how easy it is to add a cache in front of a database. The code to add the cache is just thrown directly onto the methods accessing / writing the data. It seems we've forgotton or thrown out the idea of design patterns. Like they are a waste of time or something. Or perhaps, they're only demos. Demos become the documentation and get implemented because there are devs who simply don't know any better. (Insert old man yelling at the clouds).In the interested of keeping my head-banging for heavy metal, I wrote my own demo.
 
 ## Proxy pattern intent
-The intent of the Proxy pattern is to create a surrogate that controls access to another object. Wow, that sounds a lot like what I want to do here. Specifically, I want to try my cache first. If the data I want is there I'll return that. Otherwise I'll go to the DB and cache that data on the way back out.
+The intent of the Proxy pattern is to create a surrogate that controls access to another object. Wow, that sounds a lot like what I want to do here. Specifically, I want a cache that intercepts database access and tries to fulfil any data requests from the cache first. If the data I want is there I'll return that. Otherwise I'll send the request on to the database and cache that data on the way back out.
 
 ## Implementation
 I've put the project for this article here: https://github.com/mikehans/AzureCosmosRedisCaching
@@ -109,7 +109,9 @@ Here I've used Microsoft's built-in DI container from ```Microsoft.Extensions.De
         )
     );
 ```
-This container doesn't provide a means for selecting which implementation to use. While the Microsoft doco says to just change your design, I don't want to. Some other dependency injection containers support named dependencies (Autofac?), which I think will let me inject the ```CosmosStorage``` class into the ```RedisStorage``` class and then register ```RedisStorage``` as the class I get when I request an ```IStorage``` service from the DI container. This is starting to sound like a follow-up article.
+This container doesn't provide a means for selecting which implementation to use for a given case. While the Microsoft doco says to just change your design, I don't want to. Some other dependency injection containers support named or keyed dependencies (Autofac), which I think will let me inject the ```CosmosStorage``` class into the ```RedisStorage``` class and then register ```RedisStorage``` as the class I get when I request an ```IStorage``` service from the DI container. 
+
+_EDIT: Keyed dependencies have been added in .NET 8._
 
 ### Other applications
 A simple architecture if you're hosting the application yourself on your own web server would be to have a PostgreSQL database with an in-memory cache on the web server itself.
