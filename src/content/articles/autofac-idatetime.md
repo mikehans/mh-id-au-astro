@@ -40,7 +40,7 @@ I have defined it here simply for convenience. ```AppDateTime``` is the class us
         .UseServiceProviderFactory(new AutofacServiceProviderFactory())
         .ConfigureContainer<ContainerBuilder>(b =>
         {
-            b.RegisterModule(new FakeDateTimeModule());
+            // b.RegisterModule(new FakeDateTimeModule());
             b.RegisterModule(new DateTimeModule());
 
             b.Register(c => new MyConsumer { _dateTime = c.Resolve<IDateTime>() });
