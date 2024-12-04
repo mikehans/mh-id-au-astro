@@ -6,7 +6,7 @@ function TagList(props) {
 
   return (
     <>
-      {tags && tags.map((tag) => <span class="cardList-tag px0-5">{tag}</span>)}
+      {tags && tags.map((tag) => <span className="cardList-tag px0-5" key={tag}>{tag}</span>)}
     </>
   );
 }

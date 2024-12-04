@@ -1,17 +1,11 @@
 import React from "react";
-import CategoryList from "./CategoryList.tsx";
-import Card from "./Card.tsx";
-import "./ArticleListReact.css";
+import Card from "@components/Card";
 
-function ArticleListReact(props) {
-  const {items} = props;
-
+function CardListReact({ cards }) {
   return (
     <>
-      <CategoryList items={items} />
-
       <ul className="articleList">
-        {items.map((card) => (
+        {cards.map((card) => (
           <Card
             title={card.data.title}
             pubDate={card.data.date}
@@ -19,6 +13,7 @@ function ArticleListReact(props) {
             description={card.data.description}
             readMoreLink={`/articles/${card.slug}`}
             tags={card.data.tags}
+            key={card.slug}
           />
         ))}
       </ul>
@@ -26,4 +21,4 @@ function ArticleListReact(props) {
   );
 }
 
-export default ArticleListReact;
+export default CardListReact;

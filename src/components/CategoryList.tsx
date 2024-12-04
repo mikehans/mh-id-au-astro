@@ -1,36 +1,35 @@
 import React, {useState} from "react";
 import "./CategoryList.css";
 
-function CategoryList(props) {
-  const [filter, setFilter] = useState('all');
-
-  const { items } = props;
+function CategoryList({ items, selectedCategory, setSelectedCategory }) {
   const uniqueTags = new Set();
 
   items.forEach(
     (item) => item.data.tags && item.data.tags.forEach((t) => uniqueTags.add(t))
   );
-  console.log(uniqueTags);
 
   const tags = [...uniqueTags.values()].sort();
 
-  const handleFilterClick = (e: any) => {
-    console.log(e)
-    // e.preventDefault();
-    setFilter('asdf');
-    alert('clicked');
+  const handleFilterClick = (e) => {
+    console.log('e', e)
+    e.target.classList.add('selected');
+    setSelectedCategory(e.target.innerText);
   }
 
   return (
     <>
-      {/* <h3>Categories</h3> */}
-      {/* <p>Click to filter posts by a category.</p> */}
-      <p>Selected Filter: {filter}</p>
+      <p>Selected category: {selectedCategory} </p>
+
       <ul className="categoryList">
-        {tags.map((it) => (
-          <li className="category">
-            <button className="filter-button" onClick={() => handleFilterClick({it})}>
-              {it}
+        <li className="category">
+        <button className={`filter-button ${selectedCategory == 'All' && 'selected'}`} onClick={handleFilterClick}>
+              All
+            </button>
+        </li>
+        {tags.map((tag) => (
+          <li className="category" key={tag}>
+            <button className={`filter-button ${selectedCategory == tag && 'selected'}`} onClick={handleFilterClick}>
+              {tag}
             </button>
           </li>
         ))}
