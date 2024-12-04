@@ -15,7 +15,8 @@ tags:
     - Redis
     - design patterns
 ---
-# So what's my beef here?
+# A C# caching proxy implementation for Redis and Cosmos DB
+## So what's my beef here?
 Over and over again, I see demos / doco showing how easy it is to add a cache in front of a database. The code to add the cache is just thrown directly onto the methods accessing / writing the data. It seems we've forgotton or thrown out the idea of design patterns, like they are a waste of time or something. Or perhaps, they're only demos, so certain things don't matter. Demos become the documentation and get implemented because there are devs who simply don't know any better. (Insert old man yelling at the clouds). So in the interests of keeping my head-banging for heavy metal, I've written my own demo.
 
 ## Proxy pattern intent
