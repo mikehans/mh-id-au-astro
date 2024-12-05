@@ -10,7 +10,7 @@ export interface Article {
         description: string;
         author: string;
         type: string;
-        tags:Array<string>;
+        tags:Array<string> | {tag: string, tagSorting: string};
         publish: boolean;
     }
 }

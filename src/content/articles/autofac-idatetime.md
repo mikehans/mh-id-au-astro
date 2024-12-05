@@ -1,6 +1,6 @@
 ---
 slug: 'autofac-idatetime'
-date: "2024-08-6"
+date: "2024-08-06"
 title: "Providing an IDateTime interface for dependency injection with Autofac"
 description: "Documents an approach for creating an interface to remove the concrete dependency on DateTime.Now."
 author: "Mike Hansford"
