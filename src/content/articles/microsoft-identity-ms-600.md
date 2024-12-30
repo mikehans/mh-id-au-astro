@@ -10,6 +10,7 @@ tags:
     - MS-600
     - Microsoft Identity
     - Microsoft 365
+    - certification
 ---
 ## Microsoft Identity (MS-600)
 ### Summary of what I think matters so far

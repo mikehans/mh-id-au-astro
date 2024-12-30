@@ -11,6 +11,7 @@ tags:
     - Azure
     - AZ-204
     - Cosmos DB
+    - certification
 ---
 ## Azure Cosmos DB with .NET SDK
 Cosmos DB is one of the topics for the AZ-204 domain "Develop for Azure Storage". This article unpacks some of the lessons from exploring the scope of this requirement with respect to the SDK. 

@@ -12,6 +12,7 @@ tags:
     - Microsoft 365
     - OpenID Connect
     - OAuth 2.0
+    - certification
 ---
 ## Microsoft Identity (MS-600) - Register an application
 [Return to Table of Contents for the Microsoft Identity (MS-600) posts](microsoft-identity-ms-600)
